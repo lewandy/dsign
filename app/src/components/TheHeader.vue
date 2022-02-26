@@ -4,7 +4,8 @@
       <el-icon :style="{ marginTop: '10px' }" :size="40">
         <files />
       </el-icon>
-      <el-menu-item index="1">My Documents</el-menu-item>
+      <el-menu-item id="my-documents-button" index="1">My Documents</el-menu-item>
+      <el-menu-item index="2">Contacts</el-menu-item>
       <el-menu-item class="menu-logout-button" index="3">Logout</el-menu-item>
     </el-menu>
   </el-header>
@@ -37,5 +38,9 @@ export default defineComponent({
 .menu-logout-button {
   position: absolute;
   right: 0px;
+}
+
+#my-documents-button {
+  margin-left: 10px;
 }
 </style>
