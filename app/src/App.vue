@@ -1,7 +1,9 @@
 <template>
   <el-container>
     <TheHeader />
-    <el-main>Main</el-main>
+    <el-main>
+      <router-view />
+    </el-main>
     <el-footer>Footer</el-footer>
   </el-container>
 </template>
