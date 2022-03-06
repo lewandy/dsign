@@ -4,7 +4,7 @@ const Contracts = () => import("@/pages/Contracts.vue");
 const Contacts = () => import("@/pages/Contacts.vue");
 
 const routes = [
-  { path: "/contracts", name: "contracts.list", component: Contracts },
+  { path: "/", name: "contracts.list", component: Contracts },
   { path: "/contacts", name: "contacts.list", component: Contacts },
 ];
 
