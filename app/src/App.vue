@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container class="container">
     <TheHeader />
     <el-main>
       <router-view />
@@ -21,5 +21,9 @@ html {
 
 #app {
   height: 100%;
+}
+
+.container {
+  height: 100vh;
 }
 </style>

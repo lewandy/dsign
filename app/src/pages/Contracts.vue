@@ -1,12 +1,17 @@
 <template>
-  <div>Contracts page</div>
+  <el-container class="contracts__container">Contracts page</el-container>
 </template>
 
 <script lang="ts">
-export default {
-  name: "Contracts"
-}
+import { defineComponent } from "vue"
+
+export default defineComponent({
+  name: "Contracts",
+})
 </script>
 
-<style>
+<style scoped>
+.contracts__container {
+  height: 100%;
+}
 </style>
