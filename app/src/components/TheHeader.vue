@@ -29,9 +29,6 @@ export default defineComponent({
     const router: Router = useRouter()
 
     const activeIndex = ref('1')
-    const handleSelect = (key: string, keyPath: string[]) => {
-      console.log(key, keyPath)
-    }
 
     const goToRoute = (name: string) => {
       router.push({ name })
@@ -39,8 +36,7 @@ export default defineComponent({
 
     return {
       goToRoute,
-      activeIndex,
-      handleSelect
+      activeIndex
     }
   }
 })
