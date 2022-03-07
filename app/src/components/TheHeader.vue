@@ -13,42 +13,55 @@
       <el-menu-item index="2" @click="goToRoute('contacts.list')"
         >Contacts</el-menu-item
       >
-      <el-menu-item class="menu-logout-button" index="3">Logout</el-menu-item>
+      <el-dropdown class="menu__logout-dropdown">
+        <div id="avatar-container">
+          <span>ldilone</span>
+          <el-avatar
+            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+          />
+        </div>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item :icon="User">My Account</el-dropdown-item>
+            <el-dropdown-item :icon="Warning">Logout</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </el-menu>
   </el-header>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
-import { Files } from "@element-plus/icons-vue";
+<script setup lang="ts">
+import { ref } from "vue";
+import { Files, User, Warning } from "@element-plus/icons-vue";
 import { Router, useRouter } from "vue-router";
 
-export default defineComponent({
-  name: "TheHeader",
-  components: {
-    Files,
-  },
-  setup() {
-    const router: Router = useRouter();
+const router: Router = useRouter();
 
-    const activeIndex = ref("1");
+const activeIndex = ref();
 
-    const goToRoute = (name: string) => {
-      router.push({ name });
-    };
-
-    return {
-      goToRoute,
-      activeIndex,
-    };
-  },
-});
+const goToRoute = (name: string) => {
+  router.push({ name });
+};
 </script>
 
 <style scoped>
-.menu-logout-button {
+.menu__logout-dropdown {
   position: absolute;
+  height: 100% !important;
   right: 0px;
+  cursor: pointer;
+}
+
+#avatar-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#avatar-container span {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 #my-documents-button {
