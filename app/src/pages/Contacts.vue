@@ -4,9 +4,8 @@
 
 <script lang="ts">
 export default {
-  name: "Contacts"
-}
+  name: "Contacts",
+};
 </script>
 
-<style>
-</style>
+<style></style>

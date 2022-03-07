@@ -16,6 +16,7 @@ declare module "vue" {
     ElRow: typeof import("element-plus/es")["ElRow"];
     ElSpace: typeof import("element-plus/es")["ElSpace"];
     ElSubMenu: typeof import("element-plus/es")["ElSubMenu"];
+    TheHeader: typeof import("./src/components/TheHeader.vue")["default"];
   }
 }
 

@@ -15,16 +15,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
-import { Upload } from "@element-plus/icons-vue"
+import { defineComponent } from "vue";
+import { Upload } from "@element-plus/icons-vue";
 
 export default defineComponent({
   name: "Contracts",
   components: {
-    Upload
-  }
-})
+    Upload,
+  },
+});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

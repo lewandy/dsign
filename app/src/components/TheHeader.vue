@@ -8,8 +8,11 @@
         id="my-documents-button"
         @click="goToRoute('contracts.list')"
         index="1"
-      >Contracts</el-menu-item>
-      <el-menu-item index="2" @click="goToRoute('contacts.list')">Contacts</el-menu-item>
+        >Contracts</el-menu-item
+      >
+      <el-menu-item index="2" @click="goToRoute('contacts.list')"
+        >Contacts</el-menu-item
+      >
       <el-menu-item class="menu-logout-button" index="3">Logout</el-menu-item>
     </el-menu>
   </el-header>
@@ -17,29 +20,29 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Files } from "@element-plus/icons-vue"
+import { Files } from "@element-plus/icons-vue";
 import { Router, useRouter } from "vue-router";
 
 export default defineComponent({
-  name: 'TheHeader',
+  name: "TheHeader",
   components: {
-    Files
+    Files,
   },
   setup() {
-    const router: Router = useRouter()
+    const router: Router = useRouter();
 
-    const activeIndex = ref('1')
+    const activeIndex = ref("1");
 
     const goToRoute = (name: string) => {
-      router.push({ name })
-    }
+      router.push({ name });
+    };
 
     return {
       goToRoute,
-      activeIndex
-    }
-  }
-})
+      activeIndex,
+    };
+  },
+});
 </script>
 
 <style scoped>
