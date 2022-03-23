@@ -8,7 +8,7 @@
         id="my-documents-button"
         @click="goToRoute('contracts.list')"
         index="1"
-        >Contracts</el-menu-item
+        >Documents</el-menu-item
       >
       <el-menu-item index="2" @click="goToRoute('contacts.list')"
         >Contacts</el-menu-item
