@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, Router } from "vue-router";
 
-const Contracts = () => import("@/pages/Contracts.vue");
+const Contracts = () => import("@/pages/Documents.vue");
 const Contacts = () => import("@/pages/Contacts.vue");
 
 const routes = [
