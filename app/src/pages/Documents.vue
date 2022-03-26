@@ -12,9 +12,7 @@
   <el-row>
     <el-col :span="24">
       <div class="cards-container">
-        <template v-for="o in 20">
-          <DocumentItem />
-        </template>
+        <DocumentList />
       </div>
     </el-col>
   </el-row>
@@ -22,14 +20,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import DocumentItem from "../components/DocumentItem.vue";
+import DocumentList from "../components/DocumentList.vue";
 import { Upload } from "@element-plus/icons-vue";
 
 export default defineComponent({
   name: "Contracts",
   components: {
     Upload,
-    DocumentItem,
+    DocumentList,
   },
 });
 </script>

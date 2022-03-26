@@ -8,12 +8,17 @@
         id="my-documents-button"
         @click="goToRoute('contracts.list')"
         index="1"
-      >Documents</el-menu-item>
-      <el-menu-item index="2" @click="goToRoute('contacts.list')">Contacts</el-menu-item>
+        >Documents</el-menu-item
+      >
+      <el-menu-item index="2" @click="goToRoute('contacts.list')"
+        >Contacts</el-menu-item
+      >
       <el-dropdown class="menu__logout-dropdown">
         <div id="avatar-container">
           <span>ldilone</span>
-          <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
+          <el-avatar
+            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+          />
         </div>
         <template #dropdown>
           <el-dropdown-menu>
@@ -33,7 +38,7 @@ import { Router, useRouter } from "vue-router";
 
 const router: Router = useRouter();
 
-const activeIndex = ref('1');
+const activeIndex = ref("1");
 
 const goToRoute = (name: string) => {
   router.push({ name });
